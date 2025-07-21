@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?romantic,love,couple') no-repeat center center fixed; /* Romantic background */
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* For better readability on busy backgrounds */
+    position: relative;
+    overflow: hidden; /* Prevent scrollbar from background */
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.countdown-container {
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white box */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    z-index: 2; /* Ensure it's above the overlay */
+    max-width: 90%;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #ffcccc; /* Soft pink/red for warmth */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.event-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.time-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffe0b2; /* A warm, soft orange/cream */
+    min-width: 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-box .label {
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+
+.current-time-zones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.timezone-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.current-time {
+    font-weight: bold;
+    color: #ffcccc; /* Matching the title color */
+}
+
+.footer-note {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    margin-top: 40px;
+    color: #f0f0f0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5em;
+    }
+    .countdown-timer {
+        flex-wrap: wrap; /* Allow time boxes to wrap */
+        gap: 15px;
+    }
+    .time-box {
+        font-size: 2.5em;
+        padding: 10px 20px;
+        min-width: 80px;
+    }
+    .time-box .label {
+        font-size: 0.4em;
+    }
+    .current-time-zones {
+        flex-direction: column; /* Stack timezones vertically */
+        align-items: center;
+        gap: 20px;
+    }
+    .countdown-container {
+        padding: 20px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2em;
+    }
+    .event-description {
+        font-size: 1em;
+    }
+    .time-box {
+        font-size: 2em;
+        padding: 8px 15px;
+        min-width: 70px;
+    }
+    .footer-note {
+        font-size: 1.5em;
+    }
+}
