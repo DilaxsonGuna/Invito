@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Set your target date and time ---
-    // The target is September 26, 2025, 6:00 PM (18:00) Toronto time (EDT, which is UTC-4)
+    // The target is March 1, 2026, 4:10 PM (16:10) Toronto time (EST, which is UTC-5)
     // We convert this to UTC for a universal countdown calculation.
-    // 2025-09-26 18:00:00 EDT (UTC-4) -> 2025-09-26 22:00:00 UTC
-    const targetDate = new Date('2025-09-26T22:00:00Z'); // 'Z' indicates UTC
+    // 2026-03-01 16:10:00 EST (UTC-5) -> 2026-03-01 21:10:00 UTC
+    const targetDate = new Date('2026-03-01T21:10:00Z'); // 'Z' indicates UTC
 
     // Get elements to update
     const daysEl = document.getElementById('days');
